@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +49,7 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
+      cursor: pointer;
     }
     .whatsapp {
       background-color: #25D366;
@@ -69,6 +69,14 @@
       padding: 20px;
       margin-top: 50px;
     }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    select {
+      padding: 5px;
+      margin-right: 10px;
+    }
   </style>
 </head>
 <body>
@@ -80,20 +88,65 @@
 
   <div class="container">
     <div class="section-title">Our Products</div>
-    <div class="box">
+
+    <div class="box product" data-pack="Small Pack (100g)">
       <h3>Small Pack (100g) - TSh 2,000</h3>
       <p>Perfect for a quick bite or snack on the go.</p>
-      <a class="order-button" href="https://wa.me/255766570257?text=I%20would%20like%20to%20order%20the%20100g%20Ziwani%20Bites%20pack" target="_blank">Order 100g via WhatsApp</a>
+      <label>Qty:
+        <select class="qty-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </label>
+      <button class="order-button add-to-cart">Add to WhatsApp</button>
     </div>
-    <div class="box">
+
+    <div class="box product" data-pack="Medium Pack (250g)">
       <h3>Medium Pack (250g) - TSh 4,500</h3>
       <p>Ideal for lunch or sharing with a friend.</p>
-      <a class="order-button" href="https://wa.me/255766570257?text=I%20would%20like%20to%20order%20the%20250g%20Ziwani%20Bites%20pack" target="_blank">Order 250g via WhatsApp</a>
+      <label>Qty:
+        <select class="qty-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </label>
+      <button class="order-button add-to-cart">Add to WhatsApp</button>
     </div>
-    <div class="box">
+
+    <div class="box product" data-pack="Family Pack (500g)">
       <h3>Family Pack (500g) - TSh 8,000</h3>
       <p>Enough for the whole family to enjoy!</p>
-      <a class="order-button" href="https://wa.me/255766570257?text=I%20would%20like%20to%20order%20the%20500g%20Ziwani%20Bites%20pack" target="_blank">Order 500g via WhatsApp</a>
+      <label>Qty:
+        <select class="qty-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </label>
+      <button class="order-button add-to-cart">Add to WhatsApp</button>
     </div>
 
     <div class="section-title">Why Choose Us</div>
@@ -117,5 +170,33 @@
   <footer>
     &copy; 2025 Ziwani Bites. All rights reserved.
   </footer>
+
+  <script>
+    const phone = '255766570257';
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const products = document.querySelectorAll('.product');
+        let message = 'Hi Ziwani Bites!%0A%0AI’d like to order:%0A';
+        let hasItems = false;
+
+        products.forEach(prod => {
+          const name = prod.dataset.pack;
+          const qty = prod.querySelector('.qty-select').value;
+          if (qty > 0) {
+            message += `- ${qty} x ${encodeURIComponent(name)}%0A`;
+            hasItems = true;
+          }
+        });
+
+        if (!hasItems) {
+          alert('Please select at least one quantity.');
+          return;
+        }
+
+        const url = `https://wa.me/${phone}?text=${message}`;
+        window.open(url, '_blank');
+      });
+    });
+  </script>
 </body>
 </html>
