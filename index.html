@@ -1,123 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziwani Bites</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fdfdfd;
-      color: #333;
-    }
-    header {
-      background-color: #00796b;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 0;
-    }
-    header img {
-      height: 80px;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-    }
-    header p {
-      margin: 0.5rem 0 0 0;
-      font-style: italic;
-      font-size: 1.1rem;
-    }
-    .container {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .product {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .product h3 {
-      margin: 0.5rem 0;
-    }
-    .product p {
-      font-size: 0.9rem;
-      color: #666;
-    }
-    .whatsapp-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 10px 20px;
-      background-color: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .whatsapp-button:hover {
-      background-color: #128c45;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      font-size: 0.9rem;
-      color: #333;
-      position: relative;
-    }
-    footer a {
-      color: #25D366;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-    .footer-contact {
-      margin-top: 0.5rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziwani Bites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #004d40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+        }
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            margin-top: 40px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #004d40;
+            padding-bottom: 5px;
+        }
+        .whatsapp {
+            display: block;
+            background: #25D366;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #004d40;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Ziwani Bites Logo" />
-    <h1>Ziwani Bites</h1>
-    <p>Delicious Fried Sardines – Crispy & Ready to Enjoy</p>
-  </header>
+    <header>
+        <img src="logo.png" alt="Ziwani Bites Logo">
+        <h1>Welcome to Ziwani Bites</h1>
+        <p>Delicious Fried Sardines</p>
+    </header>
+    <div class="container">
+        <div class="section-title">Our Products</div>
+        <div class="product"><h3>Small Pack (100g)</h3><p>Perfect for a quick bite or snack on the go.</p></div>
+        <div class="product"><h3>Medium Pack (250g)</h3><p>Ideal for lunch or sharing with a friend.</p></div>
+        <div class="product"><h3>Family Pack (500g)</h3><p>Enough for the whole family to enjoy!</p></div>
 
-  <div class="container">
-    <div class="product">
-      <h3>Fried Sardines - Small Pack</h3>
-      <p>Perfect for a snack. Approx. 100g.</p>
-      <a class="whatsapp-button" href="https://wa.me/255766570257?text=I'm%20interested%20in%20the%20Small%20Pack%20of%20Fried%20Sardines" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+        <div class="section-title">Testimonials</div>
+        <div class="product"><p>"The sardines are so crispy and tasty!" — Neema J.</p></div>
+        <div class="product"><p>"Ziwani Bites changed the way I snack." — Joseph M.</p></div>
+
+        <div class="section-title">Why Choose Us</div>
+        <div class="product">
+            <ul>
+                <li>Freshly sourced ingredients</li>
+                <li>Locally made with care</li>
+                <li>Affordable and tasty</li>
+            </ul>
+        </div>
+
+        <div class="section-title">FAQ</div>
+        <div class="product"><strong>Q: Where are you located?</strong><br>A: Dar es Salaam, Tanzania.</div>
+        <div class="product"><strong>Q: Do you deliver?</strong><br>A: Yes, we offer local delivery services.</div>
+
+        <a class="whatsapp" href="https://wa.me/255766570257" target="_blank">Order Now via WhatsApp</a>
+
+        <div class="section-title">Ready to Taste the Best?</div>
+        <p>Don't wait! Click below to order your Ziwani Bites now.</p>
+        <a class="whatsapp" href="https://wa.me/255766570257" target="_blank">Chat with Us on WhatsApp</a>
     </div>
-
-    <div class="product">
-      <h3>Fried Sardines - Medium Pack</h3>
-      <p>Great for lunch or dinner. Approx. 250g.</p>
-      <a class="whatsapp-button" href="https://wa.me/255766570257?text=I'm%20interested%20in%20the%20Medium%20Pack%20of%20Fried%20Sardines" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-    </div>
-
-    <div class="product">
-      <h3>Fried Sardines - Family Pack</h3>
-      <p>Share with your family. Approx. 500g.</p>
-      <a class="whatsapp-button" href="https://wa.me/255766570257?text=I'm%20interested%20in%20the%20Family%20Pack%20of%20Fried%20Sardines" target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Ziwani Bites.<br />
-    Contact us on <a href="https://wa.me/255766570257" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-  </footer>
+    <footer>&copy; 2025 Ziwani Bites. All rights reserved.</footer>
 </body>
 </html>
