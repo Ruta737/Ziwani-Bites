@@ -3,94 +3,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziwani Bites - Order Online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziwani Bites</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fdfdfd; color: #333; }
-    header { background-color: #00796b; color: white; text-align: center; padding: 1.5rem 0; }
-    header img { height: 80px; margin-bottom: 10px; }
-    header h1 { margin: 0; font-weight: 700; font-size: 2.5rem; letter-spacing: 2px; }
-    header p { margin: 0.5rem 0 0 0; font-style: italic; font-size: 1.1rem; }
-    .container { padding: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .product { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-    .product h3 { margin: 0.5rem 0; }
-    .product p { font-size: 0.9rem; color: #666; }
-    .product select, .product button { margin-top: 10px; padding: 8px; width: 100%; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
-    .product button { background-color: #25D366; color: white; font-weight: bold; cursor: pointer; }
-    .product button:hover { background-color: #128c45; }
-    footer { text-align: center; padding: 1rem; background: #eee; font-size: 0.9rem; color: #333; }
-    footer a { color: #25D366; text-decoration: none; font-weight: bold; }
-    footer a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #004d40;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .section-title {
+      font-size: 1.8em;
+      border-bottom: 3px solid #004d40;
+      margin-top: 40px;
+      padding-bottom: 8px;
+      color: #004d40;
+    }
+    .box {
+      background: #ffffff;
+      margin-top: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .order-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .whatsapp {
+      background-color: #25D366;
+      color: white;
+      display: inline-block;
+      text-align: center;
+      padding: 12px 20px;
+      margin-top: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Ziwani Bites Logo" />
-    <h1>Ziwani Bites</h1>
-    <p>Order Fried Sardines Easily Online</p>
+    <img src="logo.png" alt="Ziwani Bites Logo">
+    <h1>Welcome to Ziwani Bites</h1>
+    <p>Delicious Fried Sardines for Every Occasion</p>
   </header>
 
   <div class="container">
-    <div class="product">
-      <h3>Small Pack (100g)</h3>
-      <p>Perfect for a light snack.</p>
-      <label for="qty100">Quantity:</label>
-      <select id="qty100">
-        <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-        <option value="3">3</option><option value="4">4</option><option value="5">5</option>
-        <option value="6">6</option><option value="7">7</option><option value="8">8</option>
-        <option value="9">9</option><option value="10">10</option>
-      </select>
+    <div class="section-title">Our Products</div>
+    <div class="box">
+      <h3>Small Pack (100g) - TSh 2,000</h3>
+      <p>Perfect for a quick bite or snack on the go.</p>
+      <a class="order-button" href="https://wa.me/255766570257?text=I%20would%20like%20to%20order%20the%20100g%20Ziwani%20Bites%20pack" target="_blank">Order 100g via WhatsApp</a>
+    </div>
+    <div class="box">
+      <h3>Medium Pack (250g) - TSh 4,500</h3>
+      <p>Ideal for lunch or sharing with a friend.</p>
+      <a class="order-button" href="https://wa.me/255766570257?text=I%20would%20like%20to%20order%20the%20250g%20Ziwani%20Bites%20pack" target="_blank">Order 250g via WhatsApp</a>
+    </div>
+    <div class="box">
+      <h3>Family Pack (500g) - TSh 8,000</h3>
+      <p>Enough for the whole family to enjoy!</p>
+      <a class="order-button" href="https://wa.me/255766570257?text=I%20would%20like%20to%20order%20the%20500g%20Ziwani%20Bites%20pack" target="_blank">Order 500g via WhatsApp</a>
     </div>
 
-    <div class="product">
-      <h3>Medium Pack (250g)</h3>
-      <p>Good for a full meal.</p>
-      <label for="qty250">Quantity:</label>
-      <select id="qty250">
-        <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-        <option value="3">3</option><option value="4">4</option><option value="5">5</option>
-        <option value="6">6</option><option value="7">7</option><option value="8">8</option>
-        <option value="9">9</option><option value="10">10</option>
-      </select>
+    <div class="section-title">Why Choose Us</div>
+    <div class="box">
+      <ul>
+        <li>Freshly sourced ingredients</li>
+        <li>Locally made with care</li>
+        <li>Affordable and tasty</li>
+      </ul>
     </div>
 
-    <div class="product">
-      <h3>Family Pack (500g)</h3>
-      <p>Best for sharing.</p>
-      <label for="qty500">Quantity:</label>
-      <select id="qty500">
-        <option value="0">0</option><option value="1">1</option><option value="2">2</option>
-        <option value="3">3</option><option value="4">4</option><option value="5">5</option>
-        <option value="6">6</option><option value="7">7</option><option value="8">8</option>
-        <option value="9">9</option><option value="10">10</option>
-      </select>
-    </div>
-  </div>
+    <div class="section-title">FAQ</div>
+    <div class="box"><strong>Q: Where are you located?</strong><br>A: Dar es Salaam, Tanzania.</div>
+    <div class="box"><strong>Q: Do you deliver?</strong><br>A: Yes, we offer local delivery services.</div>
 
-  <div style="text-align:center; padding:2rem;">
-    <button onclick="sendToWhatsApp()">Add to WhatsApp</button>
+    <div class="section-title">Ready to Taste the Best?</div>
+    <p>Don't wait! Click below to order your Ziwani Bites now.</p>
+    <a class="whatsapp" href="https://wa.me/255766570257" target="_blank">Chat with Us on WhatsApp</a>
   </div>
 
   <footer>
-    &copy; 2025 Ziwani Bites | Orders via <a href="https://wa.me/255766570257" target="_blank">WhatsApp</a>
+    &copy; 2025 Ziwani Bites. All rights reserved.
   </footer>
-
-  <script>
-    function sendToWhatsApp() {
-      let qty100 = document.getElementById("qty100").value;
-      let qty250 = document.getElementById("qty250").value;
-      let qty500 = document.getElementById("qty500").value;
-
-      let message = "Hi Ziwani Bites!%0AI'd like to order:";
-      if (qty100 > 0) message += `%0A- ${qty100} x Small Pack (100g)`;
-      if (qty250 > 0) message += `%0A- ${qty250} x Medium Pack (250g)`;
-      if (qty500 > 0) message += `%0A- ${qty500} x Family Pack (500g)`;
-
-      let whatsappNumber = "255766570257";
-      let url = `https://wa.me/${whatsappNumber}?text=${message}`;
-      window.open(url, "_blank");
-    }
-  </script>
 </body>
 </html>
